@@ -35,8 +35,8 @@ def download_favicon(url, path=ICON_PATH):
         if icon_link is None:
             return domain + '/favicon.ico'
         icon_url = icon_link["href"]
-        print(icon_url)
         full_url =  url.split("//")[0] + icon_url if not "http" in icon_url else icon_url
+        return full_url
 
     favicon_url = get_favicon_url(url)
     icon = get(favicon_url)
